@@ -8,7 +8,7 @@ export const RichPersons = [{
   name: 'Larry Page',
   artist: 'Google, Alphabet Inc.',
   description: 'Co-founder of Google who revolutionized information access through the PageRank algorithm. He now focuses on moonshot projects and aviation technology.',
-  url: 'https://internationalfinance.com/wp-content/uploads/2023/03/ifm-Larry-Page.jpg',
+  url: 'https://i.insider.com/661972143f923f7dab077005?width=1300&format=jpeg&auto=webp',
   alt: 'Larry Page, the architect of modern search and moonshot innovator.'
 }, {
   name: 'Sergey Brin',
