@@ -49,7 +49,7 @@ export default function Gallery() {
       alignItems: 'center',
       p: 2,
       minHeight: '100vh',
-      background: 'radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)',
+      background: 'radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(38, 104, 170, 1) 35%, rgba(33, 46, 105, 1) 100%)',
     }}>
       <Container
         maxWidth="sm" sx={{
@@ -116,7 +116,8 @@ export default function Gallery() {
       <Card
         sx={{
           maxWidth: '95%',
-          height: 620,
+          width: 400,
+          minHeight: 550,
           display: 'flex',
           flexDirection: 'column',
           background: 'rgba(255, 255, 255, 0.15)',
@@ -125,15 +126,28 @@ export default function Gallery() {
           border: '1px solid rgba(255, 255, 255, 0.2)',
           borderRadius: 4,
           boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+          position: 'relative',
+          pt: 5,
         }}
       >
-        <Box sx={{ height: 300, bgcolor: 'transparent' }}>
+        <Box sx={{
+          position: 'absolute',
+          top: 20,
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 60,
+          height: 15,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          borderRadius: 5,
+        }} />
+        <Box sx={{ height: 300, bgcolor: 'transparent', p: 2 }}>
           <CardMedia
             component="img"
             sx={{
               height: '100%',
               width: '100%',
-              objectFit: 'cover'
+              objectFit: 'cover',
+              borderRadius: 2,
             }}
             image={Personalities.url}
             alt={Personalities.alt}
@@ -146,21 +160,22 @@ export default function Gallery() {
         }}>
           <Typography
             variant="overline"
-            display="block" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+            display="block" sx={{ color: 'rgba(255, 255, 255, 0.7)', textAlign: 'center', mb: 1 }}>
             Richest People {index + 1} of {RichPersons.length}
           </Typography>
 
           <Typography
             gutterBottom variant="h5" component="div"
-            sx={{ color: '#fff', fontWeight: 'bold' }}>
+            sx={{ color: '#fff', fontWeight: 'bold', textAlign: 'center' }}>
             {Personalities.name}
           </Typography>
 
           <Typography variant="subtitle1" sx={{
             color: 'rgba(255, 255, 255, 0.6)',
-            mb: 1
+            mb: 1,
+            textAlign: 'center',
           }}>
-            {Personalities.artist}
+            {Personalities.Company}
           </Typography>
 
           <Button
@@ -170,7 +185,7 @@ export default function Gallery() {
               mb: 1,
               p: 0,
               color: '#00d4ff',
-              textTransform: 'none'
+              textTransform: 'none',
             }}
           >
             {showMore ? 'Hide' : 'Show'} details
