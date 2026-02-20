@@ -115,7 +115,7 @@ export default function Gallery() {
       </Container>
       <Card
         sx={{
-          width: 400,
+          maxWidth: '95%',
           height: 620,
           display: 'flex',
           flexDirection: 'column',
